@@ -1,6 +1,38 @@
 <html>
-<head></head>
-<body>
-<h1>Github IO static HTML website test</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vanoce 2020</title>
+    </head>
+    <body>
+        <script>
+            const fakeLoading = async () => {
+                await new Promise(res => setTimeout(res, 10000));
+                window.location.href = 'https://lukasaron.github.io/assets/images/josephine_intro.jpg';
+            };
+            fakeLoading();
+
+        </script>
+        <style>
+            h1 {
+                text-align: center;
+                width: 100%;
+            }
+            .loader {
+                border: 16px solid #f3f3f3; /* Light grey */
+                border-top: 16px solid #3498db; /* Blue */
+                border-radius: 50%;
+                width: 120px;
+                height: 120px;
+                margin: auto;
+                animation: spin 2s linear infinite;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+         <h1>Loading...</h1>
+         <div class="loader"></div> 
+    </body>
 </html>
